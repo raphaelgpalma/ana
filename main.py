@@ -42,6 +42,8 @@ while True:
         break
 
     print(w.summary(word))
+    machine.say(w.summary(word))
+    machine.runAndWait()
 
     t.sleep(5)
     machine.say("algo mais que eu possa ajudar?")
