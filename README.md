@@ -40,12 +40,4 @@ pip install pyttsx3
     O assistente utiliza a biblioteca Wikipedia para buscar informações na Wikipedia. Portanto, a disponibilidade e precisão das informações dependem da qualidade dos dados disponíveis na Wikipedia.
     Caso ocorram erros na busca ou na compreensão da fala do usuário, o assistente informará sobre o problema e pedirá que a consulta seja repetida.
 
-# Contribuições
-
-Contribuições são bem-vindas! Se você encontrar algum problema no código ou tiver sugestões de melhorias, fique à vontade para abrir um Pull Request ou uma Issue neste repositório.
-
-# Licença
-
-Este código é distribuído sob a licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
-
 Espero que este README ajude a apresentar o código do assistente de voz utilizando a biblioteca Wikipedia de maneira clara e concisa. Se houver algum outro detalhe específico que você gostaria de incluir no README, sinta-se à vontade para modificá-lo de acordo com as necessidades do seu projeto.
