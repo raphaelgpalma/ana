@@ -1,4 +1,3 @@
-Claro! Abaixo está um exemplo de README para o código do assistente de voz que utiliza a biblioteca Wikipedia:
 Assistente de Voz com Busca na Wikipedia
 
 Este é um simples assistente de voz que utiliza a biblioteca Wikipedia para buscar informações com base na fala do usuário. O assistente é capaz de realizar pesquisas sobre definições de palavras ou conceitos, fornecendo um resumo da Wikipedia sobre o assunto consultado.
