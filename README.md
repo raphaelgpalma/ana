@@ -1,4 +1,4 @@
-Assistente de Voz com Busca na Wikipedia
+# Assistente de Voz com Busca na Wikipedia
 
 Este é um simples assistente de voz que utiliza a biblioteca Wikipedia para buscar informações com base na fala do usuário. O assistente é capaz de realizar pesquisas sobre definições de palavras ou conceitos, fornecendo um resumo da Wikipedia sobre o assunto consultado.
 Funcionamento
@@ -18,7 +18,7 @@ O código foi escrito em Python e utiliza as seguintes bibliotecas:
     speech_recognition: Para capturar a entrada de voz do usuário.
     pyttsx3: Para sintetizar respostas de voz do assistente.
 
-Instalação
+# Instalação
 
 Para executar o código, você precisa ter Python instalado em seu computador. Além disso, é necessário instalar as bibliotecas utilizadas no código. Para isso, utilize o pip, o gerenciador de pacotes do Python:
 
