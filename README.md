@@ -26,7 +26,7 @@ pip install wikipedia-api
 pip install SpeechRecognition
 pip install pyttsx3
 
-Como usar
+# Como usar
 
     Execute o script assistente.py no terminal ou IDE Python de sua preferência.
     O assistente irá cumprimentá-lo(a) e perguntar como pode ajudar.
@@ -35,15 +35,16 @@ Como usar
     Após a leitura, o assistente perguntará se pode ajudar com mais alguma coisa.
     Para encerrar o assistente, basta dizer "Agora".
 
-Observações
+# Observações
 
     O assistente utiliza a biblioteca Wikipedia para buscar informações na Wikipedia. Portanto, a disponibilidade e precisão das informações dependem da qualidade dos dados disponíveis na Wikipedia.
     Caso ocorram erros na busca ou na compreensão da fala do usuário, o assistente informará sobre o problema e pedirá que a consulta seja repetida.
 
-Contribuições
+# Contribuições
 
 Contribuições são bem-vindas! Se você encontrar algum problema no código ou tiver sugestões de melhorias, fique à vontade para abrir um Pull Request ou uma Issue neste repositório.
-Licença
+
+# Licença
 
 Este código é distribuído sob a licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
 
