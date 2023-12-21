@@ -4,13 +4,13 @@ import pyttsx3
 import sys
 import time as t
 
-keywords = ["definir", "defesa", "o que é", "o que foi", "quem é", "quem foi", "quem era", "procure por", "defina",
-            "definição de", "busque a definição", "explique a", "explique o", "defesa"]
-w.set_lang("pt-BR")
+keywords = ["define", "definition", "what is", "who is", "search for", "explain", "tell me about"]
+w.set_lang("en")  # Set language to English for Wikipedia
+
 audio = sr.Recognizer()
 machine = pyttsx3.init()
-machine.say("Olá, eu sou a ANA, sua Assistente de Navegação Autônoma")
-machine.say("como posso ajudar?")
+machine.say("Hello, I am ANA, your Autonomous Navigation Assistant")
+machine.say("How can I help you?")
 machine.runAndWait()
 
 
@@ -18,35 +18,60 @@ def execute():
     try:
         with sr.Microphone() as source:
             print("Listening...")
-            voz = audio.listen(source)
-            command = audio.recognize_google(voz, language="pt-br")
+            audio.adjust_for_ambient_noise(source, duration=1)
+            voz = audio.listen(source, timeout=5)
+            command = audio.recognize_google(voz, language="en-US")
             command = command.lower()
             return command
-    except:
-        machine.say("Não entendi o que você disse, tente novamente por favor.")
+    except sr.UnknownValueError:
+        machine.say("Sorry, I couldn't understand. Please try again.")
         machine.runAndWait()
+        return None
+    except sr.RequestError as e:
+        print(f"Could not request results from Google Speech Recognition service; {e}")
+        return None
 
 
 def evaluate(query):
     for keyword in keywords:
-        if query.startswith(keyword):
-            return query.replace(keyword, "    ")
+        if keyword in query:
+            return query.replace(keyword, "").strip()
+    return query  # Return the original query if no keyword is found
 
 
 while True:
     word = execute()
-    print(word)
-    if "agora" in word:
-        machine.say("tudo bem, espero que eu seja útil posteriormente.")
+    if word is None:
+        continue
+
+    print("Query:", word)
+    if "now" in word:
+        machine.say("Alright, I hope I can assist you later.")
         machine.runAndWait()
         break
 
-    print(w.summary(word))
-    machine.say(w.summary(word))
+    query_result = evaluate(word)
+    print("Processed Query:", query_result)
+
+    # Check if the query explicitly mentions "Albert Einstein"
+    if "albert einstein" not in query_result:
+        query_result += " Albert Einstein"
+
+    try:
+        result = w.summary(query_result)
+        print("Wikipedia Summary:", result)
+        machine.say(result)
+    except w.DisambiguationError as e:
+        print("Disambiguation Error:", e.options)
+        machine.say(f"Multiple options found. Please specify your query.")
+    except w.PageError as e:
+        print("Page Error:", e)
+        machine.say(f"Sorry, I couldn't find information about {query_result}.")
+
     machine.runAndWait()
 
-    t.sleep(5)
-    machine.say("algo mais que eu possa ajudar?")
+    t.sleep(2)
+    machine.say("Is there anything else I can help you with?")
     machine.runAndWait()
 
 sys.exit()
