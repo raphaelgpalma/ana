@@ -7,10 +7,10 @@ The voice assistant ANA (Autonomous Navigation Assistant) interacts with the use
 
 The assistant can understand commands such as:
 
-    "What is [term or word]?"
-    "Define [term or word]"
-    "Who is [person]?"
-    "Explain [term or concept]"
+    "Quwm foi [term or word]?"
+    "Quem era [term or word]"
+    "Quem e [person]?"
+    "Explique [term or concept]"
 
 The code is written in Python and uses the following libraries:
 
