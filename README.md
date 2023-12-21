@@ -43,3 +43,23 @@ pip install pyttsx3
     In case of errors in the search or understanding of the user's speech, the assistant will inform about the issue and ask for the query to be repeated.
 
 I hope this README helps present the voice assistant code using the Wikipedia library clearly and concisely. If there's any other specific detail you would like to include in the README, feel free to modify it according to your project's needs.
+
+## Usage
+
+1.Create a virtual environment:
+
+```bash
+python -m venv venv
+```
+
+2. Install the dependencies:
+
+ ```bash
+pip install -r requirements.txt
+ ```
+
+3. Run
+
+```bash
+python main.py
+```
