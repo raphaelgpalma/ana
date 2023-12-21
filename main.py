@@ -4,15 +4,17 @@ import pyttsx3
 import sys
 import time as t
 
+# Keywords for speech recognition
 keywords = ["define", "definition", "what is", "who is", "search for", "explain", "tell me about"]
-w.set_lang("en")  # Set language to English for Wikipedia
+# Set language to English for Wikipedia
+w.set_lang("en")
 
+# Initialize speech recognition, text-to-speech, and Wikipedia
 audio = sr.Recognizer()
 machine = pyttsx3.init()
 machine.say("Hello, I am ANA, your Autonomous Navigation Assistant")
 machine.say("How can I help you?")
 machine.runAndWait()
-
 
 def execute():
     try:
@@ -31,13 +33,11 @@ def execute():
         print(f"Could not request results from Google Speech Recognition service; {e}")
         return None
 
-
 def evaluate(query):
     for keyword in keywords:
         if keyword in query:
             return query.replace(keyword, "").strip()
     return query  # Return the original query if no keyword is found
-
 
 while True:
     word = execute()
