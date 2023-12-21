@@ -10,7 +10,7 @@ The assistant can understand commands such as:
     "Quwm foi [term or word]?"
     "Quem era [term or word]"
     "Quem e [person]?"
-    "Explique [term or concept]"
+    "Defina [term or concept]"
 
 The code is written in Python and uses the following libraries:
 
