@@ -1,43 +1,45 @@
-# Assistente de Voz com Busca na Wikipedia
+## Voice Assistant with Wikipedia Search
 
-Este é um simples assistente de voz que utiliza a biblioteca Wikipedia para buscar informações com base na fala do usuário. O assistente é capaz de realizar pesquisas sobre definições de palavras ou conceitos, fornecendo um resumo da Wikipedia sobre o assunto consultado.
-Funcionamento
+This is a simple voice assistant that utilizes the Wikipedia library to search for information based on user speech. The assistant is capable of conducting searches for word or concept definitions, providing a Wikipedia summary for the queried subject.
+Operation
 
-O assistente de voz ANA (Assistente de Navegação Autônoma) interage com o usuário para entender suas consultas e realizar buscas na Wikipedia. O usuário pode fazer perguntas ou solicitar definições de palavras ou termos específicos.
+The voice assistant ANA (Autonomous Navigation Assistant) interacts with the user to understand their queries and perform searches on Wikipedia. Users can ask questions or request definitions for specific words or terms.
 
-O assistente é capaz de entender comandos como:
+The assistant can understand commands such as:
 
-    "O que é [termo ou palavra]?"
-    "Defina [termo ou palavra]"
-    "Quem é [pessoa]?"
-    "Explique a [termo ou conceito]"
+    "What is [term or word]?"
+    "Define [term or word]"
+    "Who is [person]?"
+    "Explain [term or concept]"
 
-O código foi escrito em Python e utiliza as seguintes bibliotecas:
+The code is written in Python and uses the following libraries:
 
-    wikipedia: Para buscar informações na Wikipedia.
-    speech_recognition: Para capturar a entrada de voz do usuário.
-    pyttsx3: Para sintetizar respostas de voz do assistente.
+    wikipedia: To search for information on Wikipedia.
+    speech_recognition: To capture user's voice input.
+    pyttsx3: To synthesize voice responses from the assistant.
 
-# Instalação
+## Installation
 
-Para executar o código, você precisa ter Python instalado em seu computador. Além disso, é necessário instalar as bibliotecas utilizadas no código. Para isso, utilize o pip, o gerenciador de pacotes do Python:
+To run the code, you need to have Python installed on your computer. Additionally, you need to install the libraries used in the code. Use pip, the Python package manager, to install them:
 
+```bash
 pip install wikipedia-api
 pip install SpeechRecognition
 pip install pyttsx3
+```
 
-# Como usar
+## How to Use
 
-    Execute o script assistente.py no terminal ou IDE Python de sua preferência.
-    O assistente irá cumprimentá-lo(a) e perguntar como pode ajudar.
-    Fale sua consulta ou pergunta quando o assistente indicar que está ouvindo.
-    O assistente irá buscar a resposta na Wikipedia e ler o resumo em voz alta.
-    Após a leitura, o assistente perguntará se pode ajudar com mais alguma coisa.
-    Para encerrar o assistente, basta dizer "Agora".
+    Run the script assistant.py in the terminal or your preferred Python IDE.
+    The assistant will greet you and ask how it can help.
+    Speak your query or question when the assistant indicates that it is listening.
+    The assistant will search for the answer on Wikipedia and read the summary aloud.
+    After reading, the assistant will ask if it can help with anything else.
+    To end the assistant, simply say "Now."
 
-# Observações
+## Notes
 
-    O assistente utiliza a biblioteca Wikipedia para buscar informações na Wikipedia. Portanto, a disponibilidade e precisão das informações dependem da qualidade dos dados disponíveis na Wikipedia.
-    Caso ocorram erros na busca ou na compreensão da fala do usuário, o assistente informará sobre o problema e pedirá que a consulta seja repetida.
+    The assistant uses the Wikipedia library to search for information on Wikipedia. Therefore, the availability and accuracy of information depend on the quality of the data available on Wikipedia.
+    In case of errors in the search or understanding of the user's speech, the assistant will inform about the issue and ask for the query to be repeated.
 
-Espero que este README ajude a apresentar o código do assistente de voz utilizando a biblioteca Wikipedia de maneira clara e concisa. Se houver algum outro detalhe específico que você gostaria de incluir no README, sinta-se à vontade para modificá-lo de acordo com as necessidades do seu projeto.
+I hope this README helps present the voice assistant code using the Wikipedia library clearly and concisely. If there's any other specific detail you would like to include in the README, feel free to modify it according to your project's needs.
