@@ -3,7 +3,7 @@
 This is a simple voice assistant that utilizes the Wikipedia library to search for information based on user speech. The assistant is capable of conducting searches for word or concept definitions, providing a Wikipedia summary for the queried subject.
 Operation
 
-The voice assistant ANA (Autonomous Navigation Assistant) interacts with the user to understand their queries and perform searches on Wikipedia. Users can ask questions or request definitions for specific words or terms.
+The voice assistant Hawking interacts with the user to understand their queries and perform searches on Wikipedia. Users can ask questions or request definitions for specific words or terms.
 
 The assistant can understand commands such as:
 
