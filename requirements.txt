@@ -14,3 +14,4 @@ typing_extensions==4.9.0
 urllib3==2.1.0
 wikipedia==1.4.0
 Wikipedia-API==0.6.0
+spacy==3.7.4

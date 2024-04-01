@@ -5,14 +5,14 @@ import sys
 import time as t
 
 # Keywords for speech recognition
-keywords = ["define", "definition", "what is", "who is", "search for", "explain", "tell me about"]
+keywords = ["define", "definition", "what is", "who is", "search for", "explain", "tell me about", "who was"]
 # Set language to English for Wikipedia
 w.set_lang("en")
 
 # Initialize speech recognition, text-to-speech, and Wikipedia
 audio = sr.Recognizer()
 machine = pyttsx3.init()
-machine.say("Hello, I am ANA, your Autonomous Navigation Assistant")
+machine.say("Hello, I am Hawking, your Autonomous Navigation Assistant")
 machine.say("How can I help you?")
 machine.runAndWait()
 
@@ -45,17 +45,13 @@ while True:
         continue
 
     print("Query:", word)
-    if "now" in word:
+    if "stop" in word:
         machine.say("Alright, I hope I can assist you later.")
         machine.runAndWait()
         break
 
     query_result = evaluate(word)
     print("Processed Query:", query_result)
-
-    # Check if the query explicitly mentions "Albert Einstein"
-    if "albert einstein" not in query_result:
-        query_result += " Albert Einstein"
 
     try:
         result = w.summary(query_result)
