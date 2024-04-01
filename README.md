@@ -1,4 +1,4 @@
-## A.N.A - A Voice Assistant with Wikipedia Search
+## Hawking - A Voice Assistant powered with Wikipedia Search
 
 This is a simple voice assistant that utilizes the Wikipedia library to search for information based on user speech. The assistant is capable of conducting searches for word or concept definitions, providing a Wikipedia summary for the queried subject.
 Operation
